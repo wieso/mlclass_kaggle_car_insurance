@@ -35,7 +35,7 @@ predicted_labels = locally_best_tree.best_estimator_.predict(X_test)
 # turn predictions into data frame and save as csv file
 predicted_df = pd.DataFrame(predicted_labels,
                             index = np.arange(1, X_test.shape[0] + 1),
-                            columns=["compensated"])
+                            columns=["too_much"])
 predicted_df.to_csv("../data/tree_prediction.csv", index_label="id")
 #
 #
